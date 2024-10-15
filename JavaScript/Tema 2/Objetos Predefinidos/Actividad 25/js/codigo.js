@@ -13,5 +13,5 @@ function abrirVentana(){
     }
     let intervalo = setInterval(contadorFunction,1000);
     let timeout = setTimeout(terminarIntervalo,(segundos*1000));
-    document.getElementById("resultado").innerHTML=`Ya han pasado ${segundos} segudnos y se ha cerrado la ventana emergente`;
+    document.getElementById("resultado").innerHTML=`Ya han pasado ${segundos} segundos y se ha cerrado la ventana emergente`;
 }

@@ -2,9 +2,9 @@ let obtenersuma=() =>{
     let num = parseInt(prompt("Introduce un número mayor que 0: "));
 
     if(isNaN(num) || num <=0){
-        document.write("Por favor, introudce un número valido");
+        document.write("Por favor, introduce un número valido");
         return;
-    }
+    }else{
     let suma =0;
     let cadena= '';
     for (let i = num; i>0; i--){
@@ -14,3 +14,4 @@ let obtenersuma=() =>{
     document.write(`Suma de ${cadena} = ${suma}`);
 }
 obtenersuma();
+}
