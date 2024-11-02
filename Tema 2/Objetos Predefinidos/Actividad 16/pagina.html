@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 16</title>
+</head>
+<body>
+    <h1>Página Principal</h1>
+    <input type ="button"
+    value="Abrir segunda página" 
+    onclick="seg=
+     window.open('segunda.html','ventana segunda', 'width=300,height=400,left=400,top=400')"
+     />
+
+    <input
+    type="button"
+    value="Mover a la derecha"
+    onclick="seg.moveBy(200,-100); seg.focus()"
+  />
+  <input
+  type="button"
+  value="Mover a 500x200"
+  onclick="seg.moveTo(500,200); seg.focus()"
+/> 
+<input
+type="button"
+value="Aumentar tamaño"
+onclick="seg.resizeBy(100,100); seg.focus()"
+/>
+<input
+type="button"
+value="Aumentar tamaño 100x150"
+onclick="seg.resizeTo(100,150); seg.focus()"
+/>
+
+</body>
+</html>
