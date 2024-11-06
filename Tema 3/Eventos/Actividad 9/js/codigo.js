@@ -1,9 +1,6 @@
 // Función para abrir la nueva ventana con datos.html
 document.getElementById("abrirPagina").addEventListener("click", () => {
    window.open("datos.html", "Datos del Usuario", "width=400,height=300");
-   function ventanita (){
-    document.getElementById("mostrar").addEventListener("click", enviarDatos);
-   }
 });
 
 // Función para calcular años bisiestos desde el año de nacimiento hasta el año actual
@@ -53,9 +50,6 @@ function enviarDatos() { //NO ME FUNCIONA
 }
 
 // Asigna el evento al botón 'Mostrar' de la ventana secundaria
-//if (window.location.pathname.includes("datos.html")) {
-
-   // document.getElementById("mostrar").addEventListener("click", enviarDatos);
-//}
-
-ventanita();
+if (window.location.pathname.includes("datos.html")) {
+ document.getElementById("mostrar").addEventListener("click", enviarDatos);
+}
