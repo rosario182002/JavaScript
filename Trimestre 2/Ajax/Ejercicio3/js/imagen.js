@@ -4,10 +4,10 @@ document.getElementById('respuesta').addEventListener('click', function(){
     peticion.onload = function (){
         if(peticion.status === 200){
             const dato = JSON.parse(peticion.responseText);
-            document.getElementById('respuesta').textContent = dato.answer.toUpperCase();
+            document.getElementById('texto').textContent = dato.answer.toUpperCase();
             document.getElementById('imagen').src = dato.imagen;
         } else{
-            document.getElementById('respuesta').textContent = 'Error al obtener respuesta';
+            document.getElementById('texto').textContent = 'Error al obtener respuesta';
         }
     };
     peticion.send();
