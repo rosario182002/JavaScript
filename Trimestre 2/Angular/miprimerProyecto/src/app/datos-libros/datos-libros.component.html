@@ -1,0 +1,15 @@
+<h1>{{titulo}}</h1>
+
+<button (click)="anadir($event)">Añadir</button>
+<button  [disabled]="this.libro.cantidad == 0" (click)="quitar($event)">Quitar</button>
+
+Cantidad: <input type="text" [(ngModel)]="libro.cantidad">
+
+<ul>
+<li> Titulo: {{ libro.titulo }}</li>
+<li> Autor: {{ libro.autor }}</li>
+<li> precio: {{ libro.precio }}</li>
+<li [class.aviso]="libro.stock == 0">stock: {{ libro.stock }}</li>
+<li> Cantidad: {{libro.cantidad}}</li>
+<li> imagen: <img [src] ='libro.imagen'></li>
+</ul>

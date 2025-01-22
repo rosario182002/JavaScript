@@ -1,0 +1,32 @@
+<h1>Componente Alumno</h1>
+<p>Nombre: {{nombre}}</p>
+<p>Apellido: {{apellido}}</p> 
+<p>Edad: {{edad}}</p>
+<p>Dni: {{dni}}</p>
+
+<p>Edad multiplicada por 5: {{multiplicar()}}</p>
+
+
+@if (getEdad() >= 18){
+    <p>{{edad}}, Es mayor de edad</p>
+  }@else{
+    <p> {{edad}}, Es menor de edad</p>
+  }
+
+
+ <p>Introduccir DNI</p>
+ 
+<input type="text" #nuevoDni (keyup) ="(0)" [disabled]="deshabilitado" />
+
+<p> {{nuevoDni.value}}</p>
+
+<input type="checkbox" [checked]="esMenor()">
+
+<input type="checkbox" (click)="alerta()">
+
+<label>{{textito}}</label>
+<input type ="checkbox" (click)="textoCambiado()">
+
+<label>{{eleccion}}</label>
+<input type="radio" value="H" (click)="cambiado($event)">
+<input type="radio" value="M" (click)="cambiado($event)">

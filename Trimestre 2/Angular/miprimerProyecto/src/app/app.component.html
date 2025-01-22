@@ -1,0 +1,82 @@
+<h1 style="color: palevioletred;">Mi primera aplicación Angular</h1>
+<h1 class="azul">Mi primera aplicación Angular</h1>
+<p>Hola, {{nombre}}</p>
+<img src="/corazon.jpg">
+<h2>Titulo: {{title}}</h2>
+<h2>Edad: {{edad}}</h2>
+
+@if (getEdad() >= 18){
+  <p>{{edad}}, Es mayor de edad</p>
+}@else{
+  <p> {{edad}}, Es menor de edad</p>
+}
+@if (getEdad() >= 18) {
+  <p>{{ getEdad()}}, es mayor de edad</p>
+  } @else {
+  <p>{{ getEdad() }}, es menor de edad</p>
+  }
+
+  <app-user-profile></app-user-profile> 
+
+  <p [innerHTML]="name"></p>
+  <img [src]="imgUrl" alt="imagen" width="200px">
+
+  <p class="naranja">Holaa, {{name}}</p> 
+
+  <input type="checkbox" [checked]="marcado">
+
+  <input type="text" value="{{nombre}}" [disabled]="deshabilitado">
+
+  <div>{{asignatura.nombre}}</div>
+  <div>{{asignatura.codigo}}</div>
+
+  <app-alumno></app-alumno>
+
+<!--Crear un botón y un input de tipo text. Al pulsar el botón (click), muestre en el input, el nombre de
+vuestro compañero. Pista: Crear un método y un atributo en la clase para guardar el nombre de
+vuestro compañero.-->
+  <button (click)="mostrarNombre()"></button>
+  <input type="text" value="{{nombre1}}">
+<br><br>
+<!--Crear un input de tipo text. Cuando termine de escribir en él, con el evento keyup, mostrará una
+etiqueta con lo que haya escrito. Cada vez que lance el evento, los valores se irán concatenando con
+una coma. Pista: crear un método asociado al evento keyup y un atributo key para concatenar su
+valor al nuevo valor del input. Para acceder a dicho valor: event.target.value-->
+<input type="text" (keyup)="mostrarEtiqueta($event)">
+<p>{{palabrita}}</p>
+
+<br><br>
+<!--• Crear un checkbox y que cuando lo marque o desmarque avise al componente y muestre en una
+etiqueta p de la vista, si está o no marcado.-->
+<label>{{ texto }}</label>
+<input type="checkbox" [checked]="marcado" (change)="alerta()" />
+
+<!--NGMODEL-->
+<input type="text" [(ngModel)]="nombre2">
+<p>El nombre es: {{ nombre2 }} </p>
+
+<!--Ejercicio 1 con NGMODEL 
+  Crear un input de tipo text y un div, de tal forma que el contenido del input se muestre en el div.
+Primero usar la forma de One way Binding y event Binding.
+Después usar la forma de Two Way data binding
+-->
+<input type="text" (keyup)="mostrar($event)">
+<p>{{nombre3}}</p>
+
+<input type="text" [(ngModel)]="nombre3">
+<p>El nombre es: {{ nombre3 }} </p>
+
+<!--Letras en mayusculas y en minusculas-->
+<input type="text" [(ngModel)]="texto1" value="{{texto2.toLowerCase()}}"/> <br />
+<input type="text" [(ngModel)]=" texto2" value="{{texto1.toUpperCase()}}">
+
+<!--Crear una tabla con 4 filas y dos columnas-->
+<table>
+  
+</table>
+
+<app-datos-libros></app-datos-libros>
+
+<app-user-profile nombre="Eda" role="trabajadora"></app-user-profile> 
+
+<app-user-profile nombre="Rosario" role="estudiante" (selected)="seleccionar($event)"></app-user-profile>
