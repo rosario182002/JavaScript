@@ -75,5 +75,28 @@ texto2: String = '';
 seleccionar(nombre1: String){
   console.log(nombre1);
 }
+
+checked: boolean = false; //no esta marcado
+mostrarCapa: boolean = false; //no se muestra la capa
+habilitar: boolean = false;  //el boton de habilitar o desahabilitar esta deshabilitado
+link: string = 'https://ceuandalucia.es'; //Enlace
+textoBotonCapa: string = 'Mostrar'; // Texto del botón
+
+//Alteramos el estado del checkbox
+alterarEstado(){
+  this.checked = !this.checked;
+}
+
+//Alteramos el estado de la capa
+alterarCapa(){
+  this.mostrarCapa = !this.mostrarCapa;
+  this.textoBotonCapa = this.mostrarCapa ? 'Ocultar' : 'Mostrar'; //esto lo que hace es si mostrar capa es true lo oculta y si es false lo muestra
+}
+
+//Alteramos el estado del boton
+alterarBoton(){
+  this.habilitar = !this.habilitar;
+} 
+
 }
 

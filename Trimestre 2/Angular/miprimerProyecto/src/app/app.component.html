@@ -71,12 +71,41 @@ Después usar la forma de Two Way data binding
 <input type="text" [(ngModel)]=" texto2" value="{{texto1.toUpperCase()}}">
 
 <!--Crear una tabla con 4 filas y dos columnas-->
-<table>
-  
+<!--<table>
+  <tr>
+    <td>
+      <input type="checkbox" [checked]="alterarEstado()" />
+    </td>
+  <td ¡class="fondo": ischecked>
+    Holiii
+  </td>>
+</tr>
+<tr>
+  <td colspan="2">
+    <a href="link" target="_blank">Ir a la CEU</a>
+  </td>
+</tr>
+<tr>
+  <td>
+    <button (click)="alterarCapa()">{{ textoBotonCapa }}</button>
+  </td>
+  <td>
+    <div class="{{mostrarCapa}}"> Mostrar Capa Visible</div>
+  </td>
+</tr>
+<tr>
+  <td>
+    <button (click)="alterarBoton()"> {{textoBotonCapa}} </button>
+  </td>
+  <td>
+    <div class="{{mostrarCapa}}"> Hola que tal </div>
+  </td>
+</tr>
+   
 </table>
-
+-->
 <app-datos-libros></app-datos-libros>
 
-<app-user-profile nombre="Eda" role="trabajadora"></app-user-profile> 
+<app-user-profile nombre="Josema" role="trabajador"></app-user-profile> 
 
 <app-user-profile nombre="Rosario" role="estudiante" (selected)="seleccionar($event)"></app-user-profile>
