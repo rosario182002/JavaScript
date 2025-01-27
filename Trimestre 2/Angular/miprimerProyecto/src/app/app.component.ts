@@ -98,5 +98,12 @@ alterarBoton(){
   this.habilitar = !this.habilitar;
 } 
 
+numLibro: string = '';
+
+tituloLibro: string ='';
+mostrarTitulo(datoTitulo :string){
+  this.tituloLibro = datoTitulo;
+}
+
 }
 

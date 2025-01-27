@@ -109,3 +109,10 @@ Después usar la forma de Two Way data binding
 <app-user-profile nombre="Josema" role="trabajador"></app-user-profile> 
 
 <app-user-profile nombre="Rosario" role="estudiante" (selected)="seleccionar($event)"></app-user-profile>
+
+
+<input type="text" [(ngModel)]="numLibro" />
+<app-datos-libros [numero]="numLibro"
+                  (selected)="mostrarTitulo($event)"></app-datos-libros>
+
+<p>{{tituloLibro}}</p>

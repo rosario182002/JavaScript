@@ -12,4 +12,9 @@ Cantidad: <input type="text" [(ngModel)]="libro.cantidad">
 <li [class.aviso]="libro.stock == 0">stock: {{ libro.stock }}</li>
 <li> Cantidad: {{libro.cantidad}}</li>
 <li> imagen: <img [src] ='libro.imagen'></li>
+
 </ul>
+
+<p>Quiero este Libro {{ numero }}</p>
+
+<button (click)="mostrarLibro()">Mostrar Libro</button>
