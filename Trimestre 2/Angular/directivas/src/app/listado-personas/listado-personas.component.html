@@ -1,12 +1,12 @@
-<div>
-    <input type="text" [(ngModel)]="persona.nombre">
-    <input type="text" [(ngModel)]="persona.apellido">
-    <input type="number" [(ngModel)]="persona.edad">
-  
-    <span [style.color]="esMenor() ? 'red' : 'green'">
-      {{ esMenor() ? 'Menor de edad' : 'Mayor de edad' }}
-    </span>
-  
-    <input type="radio" name="persona" (change)="seleccionarPersona()">
-  </div>
-  
+<h2>Lista de Personas</h2>
+<div *ngFor="let persona of personaHijo; let i = index">
+    {{ i + 1 }}º Nombre:  {{ persona.nombre }} - Apellido: {{ persona.apellido }} - Edad: {{ persona.edad }}
+    <p *ngIf="persona.edad < 18" [ngStyle]="{ color: 'red' }">Menor de edad</p>
+    <p *ngIf="persona.edad > 18" [ngStyle]="{ color: 'green' }">Mayor de edad</p>
+    <input type="radio" name="personaSeleccionada1" value="persona" (click)="seleccionarPersona(persona)">
+    {{ persona.nombre }} - {{ persona.edad }} años
+
+</div>
+
+    
+

@@ -1,0 +1,7 @@
+<h1>LISTA POKEMON</h1>
+
+<ul>
+  <li *ngFor="let pokemon of (pokemonList$|async)?.results">
+    {{pokemon.name}}
+  </li>
+</ul>

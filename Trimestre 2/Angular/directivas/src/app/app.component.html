@@ -44,20 +44,7 @@
 <app-articulo></app-articulo>
  
 <hr>
-<h1>Gestión de Artículos</h1>
 
-<form>
-  <label>Nombre:</label>
-  <input type="text" [(ngModel)]="nombre" />
+<app-listado-personas [personaHijo]="personas" (personaSeleccionada)="seleccionarPersona($event)"></app-listado-personas>
 
-  <label>Precio:</label>
-  <input type="number" [(ngModel)]="precio" />
-
-  <label>Unidades:</label>
-  <input type="number" [(ngModel)]="unidades" />
-
-  <button (click)="agregarArticulo()">Comprar</button>
-</form>
-
-<app-listado-articulos [articulos]="articulos"></app-listado-articulos>
 

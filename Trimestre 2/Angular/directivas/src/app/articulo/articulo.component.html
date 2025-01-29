@@ -1,24 +1,20 @@
 <h2>Alta de Artículos</h2>
 <form>
   <label>Nombre:</label>
-  <input type="text" [(ngModel)]="nombre" name="nombre">
+  <input type="text" [(ngModel)]="nombre" name="nombre" id="name">
   
   <label>Precio:</label>
-  <input type="number" [(ngModel)]="precio" name="precio">
+  <input type="number" [(ngModel)]="precio" name="precio" id="precio">
   
   <label>Unidades:</label>
-  <input type="number" [(ngModel)]="unidades" name="unidades">
+  <input type="number" [(ngModel)]="unidades" name="unidades" id="unidades">
 
   <button (click)="agregarArticulo()">Comprar</button>
 </form>
 
-<h2>Lista de artículos</h2>
-<ul>
-  <li *ngFor="let articulo of articulos; let i = index">
-    {{ i + 1 }}. {{ articulo.nombre }} - Precio: ${{ articulo.precio }} - Unidades: {{ articulo.unidades }}
-  </li>
-</ul>
-
-<!--Pasamos la lista de articulos al componente hijo-->
-<hr>
+<!--HAY QUE LLAMAR A LA LISTA CREADA EN LISTADO ARTICULOS.TS-->
 <app-listado-articulos [articulos]="articulos"></app-listado-articulos>
+
+<!--CARACTERISTICAS DE ARTICULOS-->
+<app-caracteristica-articulos (selected)="agregarCaracteristica($event)"></app-caracteristica-articulos>
+<p>La caracteristica es: {{valorhijo}}</p>
