@@ -16,8 +16,48 @@
 </ng-template>
 </form>
 
+<!--Esto es para mostrar la lista de persona-->
 <div *ngFor="let persona of personas">
   {{persona.nombre}} {{persona.apellido}} {{persona.edad}}
 </div>
 
+<!--Mostramos la lista pero en negrita-->
+<div *ngFor="let persona of personas">
+ <strong>{{persona.nombre}} {{persona.apellido}} {{persona.edad}} </strong> 
+</div>
+
+<!--Aqui solo mostramos a las persona que son menores a 30-->
+<!--<div *ngFor="let persona of personas" *ngIf="personas.edad >=30">
+  <strong>{{persona.nombre}} {{persona.apellido}} {{persona.edad}} </strong> 
+ </div>
+-->
+
+<!--Agregamos los botones-->
+<h2>Selecciona una opción</h2>
+<button (click)="seleccionarBoton('A')">A</button>
+<button (click)="seleccionarBoton('B')">B</button>
+<button (click)="seleccionarBoton('C')">C</button>
+
+<p>{{ botonSeleccionado }}</p>
+
+<!--COMPONENTE ARTICULO-->
+<app-articulo></app-articulo>
+ 
+<hr>
+<h1>Gestión de Artículos</h1>
+
+<form>
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="nombre" />
+
+  <label>Precio:</label>
+  <input type="number" [(ngModel)]="precio" />
+
+  <label>Unidades:</label>
+  <input type="number" [(ngModel)]="unidades" />
+
+  <button (click)="agregarArticulo()">Comprar</button>
+</form>
+
+<app-listado-articulos [articulos]="articulos"></app-listado-articulos>
 

@@ -1,0 +1,12 @@
+<div>
+    <input type="text" [(ngModel)]="persona.nombre">
+    <input type="text" [(ngModel)]="persona.apellido">
+    <input type="number" [(ngModel)]="persona.edad">
+  
+    <span [style.color]="esMenor() ? 'red' : 'green'">
+      {{ esMenor() ? 'Menor de edad' : 'Mayor de edad' }}
+    </span>
+  
+    <input type="radio" name="persona" (change)="seleccionarPersona()">
+  </div>
+  

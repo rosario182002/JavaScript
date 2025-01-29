@@ -1,0 +1,6 @@
+<h2>Listado de Artículos</h2>
+<ul>
+  <li *ngFor="let articulo of articulos; let i = index">
+    {{ i + 1 }}. <strong>{{ articulo.nombre }}</strong> - Precio: {{ articulo.precio }} - Unidades: {{ articulo.unidades }}
+  </li>
+</ul>
