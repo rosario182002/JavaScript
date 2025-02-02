@@ -1,0 +1,12 @@
+<h1 class="naranja">Información de Héroes</h1>
+<p>Nombre: {{nombre}}</p>
+<p>Edad: {{edad}}</p>
+
+<!--<p>Nombre en mayusculas: {{nombre | upperCase}}</p>-->
+
+<p>Nombre en mayusculas: {{nombreMayusculas()}}</p>
+
+<p>Nombre y edad: {{nombre}} - {{edad}}</p>
+
+<button (click)="cambiarEdad()">Edad cambiada: </button> <br><br>
+<button *ngIf="nombre == 'Ironman'" (click)="cambiarNombre()">Nombre cambiado:</button>
