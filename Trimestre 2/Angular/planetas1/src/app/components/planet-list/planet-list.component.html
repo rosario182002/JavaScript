@@ -1,0 +1,6 @@
+<h2>Lista de Planetas</h2>
+<ul>
+  <li *ngFor="let planet of PlanetList$ | async"?.results>
+    {{ planet.name }}
+  </li>
+</ul>
