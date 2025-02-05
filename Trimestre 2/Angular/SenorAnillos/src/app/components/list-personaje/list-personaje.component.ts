@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonajeService } from '../../services/anillos/personaje.service';
 import { Personaje } from '../../model/personaje';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-list-personaje',
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './list-personaje.component.html',
   styleUrl: './list-personaje.component.css'
 })

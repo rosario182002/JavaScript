@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SenorAnillos": {
+    "blogNoticias": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/senor-anillos",
+            "outputPath": "dist/blog-noticias",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -29,7 +29,12 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "outputMode": "server",
+            "ssr": {
+              "entry": "src/server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -59,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "SenorAnillos:build:production"
+              "buildTarget": "blogNoticias:build:production"
             },
             "development": {
-              "buildTarget": "SenorAnillos:build:development"
+              "buildTarget": "blogNoticias:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "8f0cf540-8885-4612-9eb6-2bf13be6c484"
+    "analytics": "4fd0d259-0e71-4913-b417-028802b30ecf"
   }
 }

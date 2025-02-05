@@ -8,7 +8,7 @@ import { MainComponent } from '../main/main.component';
 
 @Component({
   selector: 'app-add-personaje',
-  imports: [FormsModule,RouterOutlet,MainComponent],
+  imports: [FormsModule],
   templateUrl: './add-personaje.component.html',
   styleUrl: './add-personaje.component.css'
 })

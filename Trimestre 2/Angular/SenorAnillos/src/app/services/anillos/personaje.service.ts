@@ -9,7 +9,7 @@ export class PersonajeService {
   private personajes:Personaje[] = [
     {id:1, nombre:'Frodo', raza:'Hobbit'},
     {id:2, nombre:'Aragorn', raza:'Dúnadan'},
-    {id: 3, nombre: 'Legolas', raza: 'Elfo'}
+    {id:3, nombre: 'Legolas', raza: 'Elfo'}
   ];
 
   constructor() { }
