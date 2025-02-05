@@ -1,0 +1,7 @@
+<h3>Lista de Personajes</h3>
+<ul>
+  <li *ngFor="let personaje of personajes">
+    {{ personaje.id }} - {{ personaje.nombre }} ({{ personaje.raza }})
+    <button (click)="eliminarPersonaje(personaje.id)">Eliminar</button>
+  </li>
+</ul>

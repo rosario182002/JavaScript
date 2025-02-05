@@ -1,0 +1,9 @@
+.contenedor{
+    text-align: center;
+    padding: 20px;
+}
+.columnas{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
