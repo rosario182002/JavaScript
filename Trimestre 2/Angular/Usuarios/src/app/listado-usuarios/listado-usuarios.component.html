@@ -1,0 +1,22 @@
+<h1> Listado de Usuarios </h1>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Calle</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let usuario of (listado$ | async)">
+            <td>{{usuario.name}}</td>
+            <td>{{usuario.email}}</td>
+            <td>{{usuario.phone}}</td>
+            <td>{{usuario.address.street}}</td>
+        </tr>
+    </tbody>
+
+</table>

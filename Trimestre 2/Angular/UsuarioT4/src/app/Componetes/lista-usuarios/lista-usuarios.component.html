@@ -1,0 +1,8 @@
+<div style="text-align: center;">
+    <h2>Usuarios</h2>
+    <ul>
+        <li *ngFor="let usuario of (usuarios$ | async) ">
+            <a [routerLink]="['/usuarios', usuario.id]">{{usuario.id}} - {{usuario.name}} - {{usuario.username}}</a>
+        </li>
+    </ul>
+</div>

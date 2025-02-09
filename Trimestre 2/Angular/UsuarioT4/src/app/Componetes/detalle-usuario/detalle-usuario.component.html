@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+    <h2>{{(usuario$ | async)?.name}} ({{(usuario$ | async)?.username}})</h2>
+    <p><strong>Email:</strong> {{ (usuario$ | async)?.email }}</p>
+    <h3>Empresa</h3>
+    <p><strong>Nombre:</strong> {{ (usuario$ | async)?.company?.name }}</p>
+    <p><strong>catchPhrase:</strong> {{ (usuario$ | async)?.company?.catchPhrase }}</p>
+    <p><strong>BS:</strong> {{ (usuario$ | async)?.company?.bs }}</p>
+    <h3>Dirección</h3>
+    <p><strong>Calle:</strong> {{ (usuario$ | async)?.address?.street }}</p>
+    <p><strong>Suite</strong>{{ (usuario$ | async)?.address?.suite }}</p>
+    <p><strong>Ciudad:</strong> {{ (usuario$ | async)?.address?.city }}</p>
+    <button (click)="volver()">Atrás</button>
+</div>
