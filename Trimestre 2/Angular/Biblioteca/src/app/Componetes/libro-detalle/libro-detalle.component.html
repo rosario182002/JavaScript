@@ -1,0 +1,14 @@
+<div class="container" *ngIf="libro">
+    <h2>{{ libro.titulo }}</h2>
+    <div>
+      <strong>ID:</strong> {{ libro.id }}
+    </div>
+    <div>
+      <strong>Autor:</strong> {{ libro.autor }}
+    </div>
+    <button class="btn btn-primary" (click)="volverALibros()">Volver a los libros</button>
+  </div>
+  
+  <div class="container" *ngIf="!libro">
+    <p>Libro no encontrado.</p>
+  </div>
