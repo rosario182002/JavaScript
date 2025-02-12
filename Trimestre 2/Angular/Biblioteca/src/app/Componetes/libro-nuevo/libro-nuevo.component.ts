@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class LibroNuevoComponent implements OnInit{
 
-  nuevoLibro: Libro ={id:0, titulo:'', autor:''};
+  nuevoLibro: Libro ={id:0, titulo:'', autor:''}; //Esto lo que hace es crearme un libro vacio
 
   constructor(private librosServicio: LibrosService, private router: Router){}
 

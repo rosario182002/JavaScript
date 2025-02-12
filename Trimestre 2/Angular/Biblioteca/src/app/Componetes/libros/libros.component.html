@@ -2,9 +2,9 @@
 
 <ul>
   <li *ngFor="let libro of libros">
-    <a [routerLink]="['/detalle', libro.id]">{{ libro.id }} - {{ libro.titulo }}</a>
-    <a [routerLink]="['/libro-actualizado', libro.id]">
-      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <!--ESTO ES MI MODIFICAR POR QUE ES DE MI BOOSTRA-->
+    <a [routerLink]="['/libro-detalle', libro.id]">{{ libro.id }} - {{ libro.titulo }}</a>
+    <a [routerLink]="['/libro-actualizado', libro.id]"> 
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <!--ESTO ES EL LÁPIZ PARA EDITAR (MI BOOSTRA)-->
     </a>
   </li>
 </ul>

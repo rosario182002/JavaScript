@@ -23,6 +23,7 @@ export class LibroDetalleComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.params['id']);
+    console.log(id);
     this.libro = this.librosService.getLibroId(id);
 
     if (!this.libro) {

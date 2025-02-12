@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "UsuarioT4": {
+    "UsuarioRepaso": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/usuario-t4",
+            "outputPath": "dist/usuario-repaso",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "UsuarioT4:build:production"
+              "buildTarget": "UsuarioRepaso:build:production"
             },
             "development": {
-              "buildTarget": "UsuarioT4:build:development"
+              "buildTarget": "UsuarioRepaso:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "6cfc0c67-237b-4e9c-ae13-52530de80f36"
+    "analytics": "bab45cd7-d72b-461d-9fc6-6981d0401ec6"
   }
 }
