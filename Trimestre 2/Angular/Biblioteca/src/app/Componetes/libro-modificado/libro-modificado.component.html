@@ -1,0 +1,20 @@
+<div *ngIf="libro">
+    <h2>Modificar Libro</h2>
+  
+    <div>
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" [(ngModel)]="libro.titulo" class="form-control">
+    </div>
+  
+    <div>
+      <label for="autor">Autor:</label>
+      <input type="text" id="autor" [(ngModel)]="libro.autor" class="form-control">
+    </div>
+  
+    <button class="btn btn-primary" (click)="guardarCambios()">Guardar Cambios</button>
+    <button class="btn btn-default" (click)="volverALibros()">Volver</button>
+  </div>
+  
+  <div *ngIf="!libro">
+    <p>Libro no encontrado.</p>
+  </div>

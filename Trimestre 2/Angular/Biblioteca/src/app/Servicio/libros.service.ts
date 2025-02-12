@@ -21,4 +21,16 @@ export class LibrosService {
   getLibroId(id: number): Libro | undefined{ // le pongo el undefined por si el libro no existe que lo diga
     return this.libros.find(libro => libro.id === id);
   }
+
+  añadirLibro(libro: Libro): void{
+    this.libros.push(libro);
+  }
+
+  actualizarLibro(libro: Libro): void{
+    const index = this.libros.findIndex(l => l.id === libro.id);
+      if(index !== -1){
+        this.libros[index] = libro;
+      }
+
+  }
 }

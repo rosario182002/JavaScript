@@ -1,0 +1,14 @@
+<h2>Añadir Nuevo Libro</h2>
+
+<div>
+  <label for="titulo">Nombre:</label>
+  <input type="text" id="titulo" [(ngModel)]="nuevoLibro.titulo" class="form-control">
+</div>
+
+<div>
+  <label for="autor">Autor:</label>
+  <input type="text" id="autor" [(ngModel)]="nuevoLibro.autor" class="form-control">
+</div>
+
+<button class="btn btn-primary" (click)="anadirLibro()">Alta de Libro</button>
+<button class="btn btn-default" [routerLink]="['/libros']">Atrás</button>
